@@ -1,12 +1,14 @@
 import { Bookdata } from "../../mock-data/Book";
 
 export default function BookCard({ img, name, price }) {
+  const defaultImg = "https://via.placeholder.com/150?text=No+Image";
+
   return (
-    <div className="flex flex-col w-64 p-4 bg-white shadow-md rounded-lg hover:shadow-xl transition-shadow cursor-pointer">
+    <div className="flex flex-col w-64 p-4">
       <div className="w-full h-80 overflow-hidden rounded-md mb-4">
         <img
-          src={img}
-          alt={name}
+          src={img || defaultImg}
+          alt={name || "Book"}
           className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
         />
       </div>
