@@ -1,4 +1,4 @@
-import { Bookdata } from "../../mock-data/Book";
+import { bookData } from "../../mock-data/bookData";
 
 export default function BookCard({ img, name, price }) {
   const defaultImg = "https://via.placeholder.com/150?text=No+Image";
