@@ -1,4 +1,4 @@
-export function PopupModal({ isOpen, onClose, title, children }) {
+export default function PopupModal({ isOpen, onClose, title, children }) {
   if (!isOpen) return null;
 
   return (
