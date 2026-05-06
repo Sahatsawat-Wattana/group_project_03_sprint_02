@@ -28,15 +28,15 @@ export default function NavBar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-gray-900">
+          <div className="shrink-0">
+            <h1 className="text-xl sm:text-2xl font-bold text-gray-900">
               Read<span className="text-[#A66858]">ly</span>
             </h1>
           </div>
 
-          {/* Search Bar with Category Dropdown */}
-          <div className="flex-1 max-w-2xl mx-8">
-            <div className="flex items-center bg-white rounded-lg shadow-sm border border-gray-300">
+          {/* Search Bar with Category Dropdown - Desktop Only */}
+          <div className="hidden md:flex flex-1 max-w-2xl mx-8">
+            <div className="flex items-center bg-white rounded-lg shadow-sm border border-gray-300 w-full">
               {/* Category Dropdown */}
               <div className="relative">
                 <button
@@ -81,15 +81,15 @@ export default function NavBar() {
           </div>
 
           {/* Right Icons */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-3 sm:gap-6">
             <button className="text-black hover:text-gray-700 transition-colors">
-              <Heart size={24} />
+              <Heart size={20} className="sm:w-6 sm:h-6" />
             </button>
             <button className="text-black hover:text-gray-700 transition-colors">
-              <ShoppingCart size={24} />
+              <ShoppingCart size={20} className="sm:w-6 sm:h-6" />
             </button>
             <button className="text-black hover:text-gray-700 transition-colors">
-              <CircleUser size={24} />
+              <CircleUser size={20} className="sm:w-6 sm:h-6" />
             </button>
           </div>
         </div>
