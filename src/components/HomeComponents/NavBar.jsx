@@ -25,17 +25,17 @@ export default function NavBar() {
 
   return (
     <nav className="bg-[#EEE1DB] border-b border-[#A66858]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-11 md:h-16">
           {/* Logo */}
           <div className="shrink-0">
-            <h1 className="text-xl sm:text-2xl font-bold text-gray-900">
+            <h1 className="text-lg md:text-2xl font-bold text-gray-900">
               Read<span className="text-[#A66858]">ly</span>
             </h1>
           </div>
 
-          {/* Search Bar with Category Dropdown - Desktop Only */}
-          <div className="hidden md:flex flex-1 max-w-2xl mx-8">
+          {/* Search Bar with Category Dropdown - Desktop Only (hidden on mobile) */}
+          <div className="hidden md:flex flex-1 min-w-0 max-w-2xl mx-1 md:mx-8">
             <div className="flex items-center bg-white rounded-lg shadow-sm border border-gray-300 w-full">
               {/* Category Dropdown */}
               <div className="relative">
@@ -47,7 +47,6 @@ export default function NavBar() {
                   <ChevronDown size={16} />
                 </button>
 
-                {/* Dropdown Menu */}
                 {isDropdownOpen && (
                   <div className="absolute top-full left-0 mt-1 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-50">
                     {categories.map((category) => (
@@ -67,11 +66,11 @@ export default function NavBar() {
               </div>
 
               {/* Search Input */}
-              <div className="flex-1 flex items-center">
+              <div className="flex-1 flex items-center min-w-0">
                 <input
                   type="text"
                   placeholder="Search your favorite book..."
-                  className="flex-1 px-4 py-2 text-sm text-gray-900 placeholder-gray-400 focus:outline-none"
+                  className="flex-1 min-w-0 px-4 py-2 text-sm text-gray-900 placeholder-gray-400 focus:outline-none"
                 />
                 <button className="px-4 py-2 text-gray-400 hover:text-gray-600">
                   <Search size={20} />
@@ -81,15 +80,18 @@ export default function NavBar() {
           </div>
 
           {/* Right Icons */}
-          <div className="flex items-center gap-3 sm:gap-6">
+          <div className="flex items-center gap-2 md:gap-6">
             <button className="text-black hover:text-gray-700 transition-colors">
-              <Heart size={20} className="sm:w-6 sm:h-6" />
+              <Heart size={18} className="md:hidden" />
+              <Heart size={24} className="hidden md:block" />
             </button>
             <button className="text-black hover:text-gray-700 transition-colors">
-              <ShoppingCart size={20} className="sm:w-6 sm:h-6" />
+              <ShoppingCart size={18} className="md:hidden" />
+              <ShoppingCart size={24} className="hidden md:block" />
             </button>
             <button className="text-black hover:text-gray-700 transition-colors">
-              <CircleUser size={20} className="sm:w-6 sm:h-6" />
+              <CircleUser size={18} className="md:hidden" />
+              <CircleUser size={24} className="hidden md:block" />
             </button>
           </div>
         </div>
