@@ -25,29 +25,31 @@ export default function NavBar() {
 
   return (
     <nav className="bg-[#EEE1DB] border-b border-[#A66858]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-11 md:h-16">
+
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-gray-900">
+            <h1 className="text-lg md:text-2xl font-bold text-gray-900">
               Read<span className="text-[#A66858]">ly</span>
             </h1>
           </div>
 
           {/* Search Bar with Category Dropdown */}
-          <div className="flex-1 max-w-2xl mx-8">
+          <div className="flex-1 min-w-0 max-w-2xl mx-1 md:mx-8">
             <div className="flex items-center bg-white rounded-lg shadow-sm border border-gray-300">
+
               {/* Category Dropdown */}
               <div className="relative">
                 <button
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-gray-900 border-r border-gray-300 whitespace-nowrap"
+                  className="flex items-center gap-1 px-2 py-1 md:gap-2 md:px-4 md:py-2 text-gray-600 hover:text-gray-900 border-r border-gray-300 whitespace-nowrap"
                 >
-                  <span className="text-sm">{selectedCategory}</span>
-                  <ChevronDown size={16} />
+                  <span className="text-xs md:text-sm">{selectedCategory}</span>
+                  <ChevronDown size={12} className="md:hidden" />
+                  <ChevronDown size={16} className="hidden md:block" />
                 </button>
 
-                {/* Dropdown Menu */}
                 {isDropdownOpen && (
                   <div className="absolute top-full left-0 mt-1 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-50">
                     {categories.map((category) => (
@@ -67,31 +69,37 @@ export default function NavBar() {
               </div>
 
               {/* Search Input */}
-              <div className="flex-1 flex items-center">
+              <div className="flex-1 flex items-center min-w-0">
                 <input
                   type="text"
                   placeholder="Search your favorite book..."
-                  className="flex-1 px-4 py-2 text-sm text-gray-900 placeholder-gray-400 focus:outline-none"
+                  className="flex-1 min-w-0 px-2 py-1 md:px-4 md:py-2 text-xs md:text-sm text-gray-900 placeholder-gray-400 focus:outline-none"
                 />
-                <button className="px-4 py-2 text-gray-400 hover:text-gray-600">
-                  <Search size={20} />
+                <button className="px-2 py-1 md:px-4 md:py-2 text-gray-400 hover:text-gray-600">
+                  <Search size={16} className="md:hidden" />
+                  <Search size={20} className="hidden md:block" />
                 </button>
               </div>
+
             </div>
           </div>
 
           {/* Right Icons */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-2 md:gap-6">
             <button className="text-black hover:text-gray-700 transition-colors">
-              <Heart size={24} />
+              <Heart size={18} className="md:hidden" />
+              <Heart size={24} className="hidden md:block" />
             </button>
             <button className="text-black hover:text-gray-700 transition-colors">
-              <ShoppingCart size={24} />
+              <ShoppingCart size={18} className="md:hidden" />
+              <ShoppingCart size={24} className="hidden md:block" />
             </button>
             <button className="text-black hover:text-gray-700 transition-colors">
-              <CircleUser size={24} />
+              <CircleUser size={18} className="md:hidden" />
+              <CircleUser size={24} className="hidden md:block" />
             </button>
           </div>
+
         </div>
       </div>
     </nav>
