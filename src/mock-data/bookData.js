@@ -1,4 +1,4 @@
-export const Bookdata = [
+export const bookData = [
   {
     id: 1,
     name: "The night we met",

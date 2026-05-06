@@ -1,7 +1,8 @@
-import Footer from "./components/HomeComponents/Footer";
+import Home from "./pages/Home";
+
 export default function App() {
 
-  return ( <Footer />
-    
+  return ( 
+    <Home />
   );
 }

@@ -1,12 +1,13 @@
 import {useState, useRef} from "react"
 
 import NavBar from "../components/HomeComponents/NavBar"
-import Hero from "../components/HomeComponents/Hero"
+// import Hero from "../components/HomeComponents/Hero"
 import Banner from "../components/HomeComponents/Banner"
-import CategorySample from "../components/HomeComponents/CategorySample";
+// import CategorySample from "../components/HomeComponents/CategorySample";
 import Footer from "../components/HomeComponents/Footer";
 
-
+import { bookData } from "../mock-data/bookData";
+import { reviewData } from "../mock-data/reviewData";
 
 export default function Home() {
     const [selectedCategory,setSelectredCategory] = useState("All");
@@ -29,11 +30,11 @@ export default function Home() {
     const slideLikeRef = useRef(null);
     const slidePurchased = useRef(null);
 
-    const CATEGORIES = ["All",...new Set(Bookdata.map((book) => book.category))]
+    const CATEGORIES = ["All",...new Set(bookData.map((book) => book.category))]
 
-    const activeCategory = Bookdata.filter((book) => selectedCategory === "All" || book.category === selectedCategory);
+    const activeCategory = bookData.filter((book) => selectedCategory === "All" || book.category === selectedCategory);
 
-    const highlightBook = Bookdata.filter((book) => book.is_highlighted === "true");
+    const highlightBook = bookData.filter((book) => book.is_highlighted === "true");
 
     
     const handleCategory = (newCategory) => {
@@ -42,10 +43,12 @@ export default function Home() {
     
 
     return (
-        <NavBar />
-        <Hero />
-        <Banner />
-        <CategorySample />
-        <Footer />
+        <>
+            {/* <NavBar /> */}
+            {/* <Hero /> */}
+            <Banner />
+            {/* <CategorySample /> */}
+            <Footer />
+        </>
     );
 }
