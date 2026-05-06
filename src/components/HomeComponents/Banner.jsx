@@ -20,8 +20,8 @@ const BANNERS = [
 // ─────────────────────────────────────────────
 function BannerCard({ src }) {
   return (
-    // div ห่อรูป กำหนด fixed width 600px + shrink-0 เพื่อไม่ให้ flex บีบ
-    <div className="w-[600px] shrink-0 bg-white rounded-3xl shadow-xl overflow-hidden border-t-8">
+    // div ห่อรูป กำหนด width 85vw บน mobile, 600px บน md ขึ้นไป + shrink-0 เพื่อไม่ให้ flex บีบ
+    <div className="w-[85vw] md:w-[600px] shrink-0 bg-white rounded-3xl shadow-xl overflow-hidden border-t-8">
       {/* src → กำหนดเอง มาจาก prop ที่รับเข้ามา */}
       <img src={src} className="w-full h-auto object-cover" alt="Deal banner" />
     </div>
@@ -106,7 +106,7 @@ export default function Banner() {
   return (
     <section className="box-border h-auto bg-white flex flex-col gap-2">
       <div
-        className="relative w-full overflow-hidden bg-[#ECEAE9] py-10"
+        className="relative w-full max-w-full overflow-hidden bg-[#ECEAE9] py-10"
         // onMouseEnter / onMouseLeave — built-in React synthetic events
         // set isPausedRef.current โดยตรง (ไม่ setState) → ไม่ trigger re-render
         onMouseEnter={() => (isPausedRef.current = true)}  // hover เข้า → หยุด
@@ -115,7 +115,7 @@ export default function Banner() {
         {/* ref={trackRef} — built-in React prop
             บอก React ให้ inject DOM node ของ div นี้เข้า trackRef.current
             หลังจาก mount เสร็จ ทำให้เราจัดการ DOM โดยตรงได้ใน useEffect */}
-        <div ref={trackRef} className="flex w-[max]">
+        <div ref={trackRef} className="flex w-max">
 
           {/* ชุด A — banner จริง (visible) */}
           <div className="flex gap-6 px-3">

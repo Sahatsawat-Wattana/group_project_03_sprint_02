@@ -49,7 +49,7 @@ export default function Home() {
 
     return (
         <>
-            {/* <NavBar /> */}
+            <NavBar />
             {/* <Hero /> */}
             <Banner />
             {/* <CategorySample /> */}
