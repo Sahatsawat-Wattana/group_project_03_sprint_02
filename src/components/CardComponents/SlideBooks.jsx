@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import BookCard from "./BookCard"; // เช็ค Path ไฟล์ให้ถูกนะเอม
-import { Bookdata } from "../../mock-data/Book"; // เช็ค Path ข้อมูล
+import BookCard from "./BookCard";
+import { bookData } from "../../mock-data/bookData";
 
 export default function SlideBooks() {
   const slideRef = useRef(null);
@@ -19,7 +19,7 @@ export default function SlideBooks() {
       {/* 3. ปุ่มลูกศรซ้าย */}
       <button
         onClick={() => scroll("left")}
-        className="absolute -left-5 top-1/3 -translate-y-1/2 w-9 h-9 bg-white border border-gray-200 rounded-full shadow flex items-center justify-center"
+        className="absolute -left-5 top-1/2 -translate-y-1/2 w-9 h-9 bg-white border border-gray-200 rounded-full shadow flex items-center justify-center"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@ export default function SlideBooks() {
         ref={slideRef}
         className="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar py-4"
       >
-        {Bookdata.map((book) => (
+        {bookData.map((book) => (
           <div key={book.id} className="flex-none">
             <BookCard img={book.img} name={book.name} price={book.price} />
           </div>
@@ -52,7 +52,7 @@ export default function SlideBooks() {
       {/* 5. ปุ่มลูกศรขวา */}
       <button
         onClick={() => scroll("right")}
-        className="absolute -right-5 top-1/3 -translate-y-1/2 w-9 h-9 bg-white border border-gray-200 rounded-full shadow flex items-center justify-center"
+        className="absolute -right-5 top-1/2 -translate-y-1/2 w-9 h-9 bg-white border border-gray-200 rounded-full shadow flex items-center justify-center"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

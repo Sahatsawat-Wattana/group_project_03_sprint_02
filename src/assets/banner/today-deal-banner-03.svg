@@ -1,0 +1,14 @@
+<svg width="858" height="392" viewBox="0 0 858 392" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="858" height="392" fill="#E97451" fill-opacity="0.1"/>
+  <rect width="858" height="392" fill="#FDFCFB"/>
+  <circle cx="750" cy="50" r="150" fill="#E97451" fill-opacity="0.05"/>
+  <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Georgia, serif" font-size="42" font-weight="bold"><tspan x="60" y="120">Best Sellers</tspan></text>
+  <text fill="#E97451" xml:space="preserve" style="white-space: pre" font-family="Georgia, serif" font-size="24" font-style="italic"><tspan x="60" y="160">Most loved by our community</tspan></text>
+  <rect x="60" y="200" width="40" height="2" fill="#E97451"/>
+  <g opacity="0.8">
+    <rect x="500" y="100" width="120" height="180" rx="4" fill="#E97451"/>
+    <rect x="560" y="120" width="120" height="180" rx="4" fill="#2C2C2C"/>
+    <rect x="620" y="140" width="120" height="180" rx="4" fill="#D4C9B9"/>
+  </g>
+  <text fill="#666666" xml:space="preserve" style="white-space: pre" font-family="Arial, sans-serif" font-size="14"><tspan x="60" y="320">Explore the books that everyone is talking about this month.</tspan></text>
+</svg>

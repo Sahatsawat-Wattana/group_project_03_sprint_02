@@ -1,4 +1,4 @@
-import { Bookdata } from "../../mock-data/Book";
+import { bookData } from "../../mock-data/bookData";
 
 export default function BookCard({ img, name, price }) {
   const defaultImg = "https://via.placeholder.com/150?text=No+Image";
@@ -9,7 +9,12 @@ export default function BookCard({ img, name, price }) {
         <img
           src={img || defaultImg}
           alt={name || "Book"}
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+          onError={(e) => {
+            if (e.currentTarget.src !== defaultImg) {
+              e.currentTarget.src = defaultImg;
+            }
+          }}
+          className="mb-4 w-full h-full object-cover hover:scale-105 transition-transform duration-300"
         />
       </div>
 

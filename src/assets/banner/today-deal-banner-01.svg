@@ -1,0 +1,12 @@
+<svg width="858" height="392" viewBox="0 0 858 392" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="858" height="392" fill="#F5F2ED"/>
+  <rect x="40" y="40" width="778" height="312" stroke="#D4C9B9" stroke-width="1"/>
+  <text fill="#4A3E37" xml:space="preserve" style="white-space: pre" font-family="Georgia, serif" font-size="48" font-weight="bold" letter-spacing="0.02em"><tspan x="80" y="140">Editor's</tspan><tspan x="80" y="200">Pick of the Week</tspan></text>
+  <text fill="#8C7A6B" xml:space="preserve" style="white-space: pre" font-family="Arial, sans-serif" font-size="18" letter-spacing="0.1em"><tspan x="80" y="240">CURATED SELECTION FOR DISCERNING READERS</tspan></text>
+  <rect x="80" y="280" width="160" height="45" rx="4" fill="#4A3E37"/>
+  <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial, sans-serif" font-size="14" font-weight="bold"><tspan x="120" y="308">SHOP NOW</tspan></text>
+  <circle cx="650" cy="196" r="120" fill="#E6DFD5"/>
+  <rect x="580" y="100" width="140" height="200" rx="2" fill="white" stroke="#D4C9B9"/>
+  <rect x="595" y="120" width="110" height="10" rx="1" fill="#D4C9B9"/>
+  <rect x="595" y="140" width="80" height="5" rx="1" fill="#E6DFD5"/>
+</svg>
