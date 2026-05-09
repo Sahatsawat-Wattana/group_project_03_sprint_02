@@ -2,6 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
 import Typography from "@mui/material/Typography";
+import reviewData from "../mock-data/reviewData";
 
 export default function StarRating() {
   const [value, setValue] = React.useState(2);
