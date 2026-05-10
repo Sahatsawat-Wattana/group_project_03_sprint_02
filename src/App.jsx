@@ -1,5 +1,8 @@
 import Home from "./pages/Home";
+import BookDetail from "./pages/BookDetail";
 
 export default function App() {
-  return <Home />;
+  // TODO: Add routing later (React Router)
+  // For now, change between <Home /> and <BookDetail /> to test
+  return <BookDetail />;
 }
