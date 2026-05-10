@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CategoryFilter from "../CategoryFilter";
 import SlideBooks from "../CardComponents/SlideBooks";
+import { bookData } from "../../mock-data/bookData";
 
 export default function CategorySample() {
   const categories = [
@@ -11,6 +12,12 @@ export default function CategorySample() {
     "Children's Books",
   ];
   const [activeCategory, setActiveCategory] = useState("Romance");
+
+  // กรองข้อมูล: ถ้าในข้อมูล (book.category) ตรงกับหมวดที่เลือก (activeCategory) ให้เก็บไว้
+  const filteredBooks = bookData.filter((book) => {
+    // ป้องกันเรื่องตัวพิมพ์เล็ก-ใหญ่ไม่ตรงกัน โดยใช้ toLowerCase()
+    return book.category.toLowerCase() === activeCategory.toLowerCase();
+  });
 
   return (
     <div className="pt-16 pb-14 px-20 bg-[#EEE1DB]">
@@ -28,7 +35,7 @@ export default function CategorySample() {
 
       {/* ส่วนแสดง BookCard ที่เอมทำไว้ (ใส่ Filter ตามหมวดหมู่ได้เลยค่ะ) */}
       <div className="flex items-center gap-6 overflow-x-auto py-4 ml-14 bg-[#F9EEE9] rounded-3xl">
-        <SlideBooks />
+        <SlideBooks books={filteredBooks} />
       </div>
     </div>
   );

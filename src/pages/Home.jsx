@@ -1,10 +1,8 @@
 import { useState, useRef } from "react";
 
 import NavBar from "../components/HomeComponents/NavBar";
-// import Hero from "../components/HomeComponents/Hero"
 import Hero from "../components/HomeComponents/Hero";
 import Banner from "../components/HomeComponents/Banner";
-// import CategorySample from "../components/HomeComponents/CategorySample";
 import CategorySample from "../components/HomeComponents/CategorySample";
 import Footer from "../components/HomeComponents/Footer";
 import PopupModal from "../components/PopupModal";
@@ -53,11 +51,8 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      {/* <Hero /> */}
-
       <Hero />
       <Banner />
-      {/* <CategorySample /> */}
       <CategorySample />
       <Footer />
     </>

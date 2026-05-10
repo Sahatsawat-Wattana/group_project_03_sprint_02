@@ -1,8 +1,7 @@
 import { useRef } from "react";
 import BookCard from "./BookCard";
-import { bookData } from "../../mock-data/bookData";
 
-export default function SlideBooks() {
+export default function SlideBooks({ books }) {
   const slideRef = useRef(null);
 
   const scroll = (direction) => {
@@ -42,7 +41,7 @@ export default function SlideBooks() {
         ref={slideRef}
         className="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar py-4"
       >
-        {bookData.map((book) => (
+        {books.map((book) => (
           <div key={book.id} className="flex-none">
             <BookCard img={book.img} name={book.name} price={book.price} />
           </div>
