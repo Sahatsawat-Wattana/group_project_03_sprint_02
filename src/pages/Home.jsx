@@ -2,7 +2,9 @@ import { useState, useRef } from "react";
 
 import NavBar from "../components/HomeComponents/NavBar";
 // import Hero from "../components/HomeComponents/Hero"
+import Hero from "../components/HomeComponents/Hero";
 import Banner from "../components/HomeComponents/Banner";
+// import CategorySample from "../components/HomeComponents/CategorySample";
 import CategorySample from "../components/HomeComponents/CategorySample";
 import Footer from "../components/HomeComponents/Footer";
 import PopupModal from "../components/PopupModal";
@@ -30,7 +32,7 @@ export default function Home() {
   const slideCategoryRef = useRef(null);
   const slideLikeRef = useRef(null);
   const slidePurchased = useRef(null);
-
+  const scrollRef = useRef(null);
   // for PopupModal (น่าจะต้องเปลี่ยนหรือเพิ่ม ถ้าต้องเรียกหลาย Popup)
   const [open, setOpen] = useState(false);
 
@@ -52,7 +54,10 @@ export default function Home() {
     <>
       <NavBar />
       {/* <Hero /> */}
+
+      <Hero />
       <Banner />
+      {/* <CategorySample /> */}
       <CategorySample />
       <Footer />
     </>
