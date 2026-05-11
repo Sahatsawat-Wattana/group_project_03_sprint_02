@@ -1,0 +1,16 @@
+<svg width="858" height="392" viewBox="0 0 858 392" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="858" height="392" fill="#2D433D"/>
+  <path d="M0 0H858V392H0V0Z" fill="url(#paint0_linear)"/>
+  <text fill="#E8E2D6" xml:space="preserve" style="white-space: pre" font-family="Georgia, serif" font-size="56" font-weight="normal"><tspan x="70" y="150">New</tspan><tspan x="70" y="215">Arrivals</tspan></text>
+  <text fill="#A3B4AF" xml:space="preserve" style="white-space: pre" font-family="Arial, sans-serif" font-size="16" letter-spacing="0.2em"><tspan x="70" y="260">DISCOVER YOUR NEXT STORY</tspan></text>
+  <line x1="70" y1="285" x2="300" y2="285" stroke="#E8E2D6" stroke-width="2"/>
+  <rect x="550" y="60" width="220" height="280" fill="#E8E2D6" opacity="0.1"/>
+  <rect x="520" y="80" width="220" height="280" fill="#E8E2D6"/>
+  <text fill="#2D433D" xml:space="preserve" style="white-space: pre" font-family="Georgia, serif" font-size="24" font-weight="bold"><tspan x="540" y="130">The Art of</tspan><tspan x="540" y="160">Minimalism</tspan></text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="858" y2="392" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2D433D"/>
+      <stop offset="1" stop-color="#1B2B27"/>
+    </linearGradient>
+  </defs>
+</svg>
