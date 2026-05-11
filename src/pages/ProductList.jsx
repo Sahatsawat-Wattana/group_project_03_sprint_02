@@ -15,7 +15,7 @@ const ProductList = () => {
 
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(8);
-  const { selectedCategory, setSelectedCategory } = useState('All');
+  const [ selectedCategory, setSelectedCategory ] = useState('All');
 
   // --- Responsive Logic ---
   useEffect(() => {
@@ -143,7 +143,6 @@ const ProductList = () => {
         </div>
       </div>
       <Footer />
-      <ScrollRestoration />
     </>
   );
 };
