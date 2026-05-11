@@ -31,9 +31,7 @@ export function CartProvider({ children }) {
 
       if (existingItem) {
         return currentItems.map((item) =>
-          item.id === book.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item,
+          item.id === book.id ? { ...item, quantity: item.quantity + 1 } : item,
         );
       }
 
