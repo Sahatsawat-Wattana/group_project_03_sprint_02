@@ -35,7 +35,7 @@ export default function Home() {
   const scrollRef = useRef(null);
   // for PopupModal (น่าจะต้องเปลี่ยนหรือเพิ่ม ถ้าต้องเรียกหลาย Popup)
   const [open, setOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState("Home"); // "home" | "payment" -- เดี๋ยวอาจจะต้องเอาออกต้องใช้ Router (?)
+  const [currentPage, setCurrentPage] = useState("home"); // "home" | "payment" -- เดี๋ยวอาจจะต้องเอาออกต้องใช้ Router (?)
 
   const CATEGORIES = ["All", ...new Set(bookData.map((book) => book.category))];
 
@@ -51,7 +51,7 @@ export default function Home() {
     setSelectredCategory(newCategory);
   };
 
-  // อาจจะต้องเอาออกตอนใช้ router (?)
+  // อาจจะต้องเอาออกตอนใช้ router (?) แต่ต้องไปแก้ใน `PaementPage` ด้วย
   if (currentPage === "payment") {
     return <PaymentPage onBackToHome={() => setCurrentPage("home")} />;
   }
