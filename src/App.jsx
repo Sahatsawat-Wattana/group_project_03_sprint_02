@@ -1,11 +1,5 @@
-import BookDetail from "./pages/BookDetail";
-import Cart from "./components/HomeComponents/Cart";
-import ProductList from "./pages/ProductList"; 
+import Home from "./pages/Home";
 
 export default function App() {
-  return (
-    <>
-      <ProductList/>
-    </>
-  );
+  return <Home />;
 }

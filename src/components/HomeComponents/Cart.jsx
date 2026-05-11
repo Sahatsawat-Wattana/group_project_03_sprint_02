@@ -5,7 +5,7 @@ function formatPrice(price) {
   return `$${price.toFixed(2)}`;
 }
 
-export default function Cart() {
+export default function Cart({ onCheckout }) {
   const {
     cartItems,
     clearCart,
@@ -123,7 +123,7 @@ export default function Cart() {
               <button
                 className="w-full rounded-2xl bg-[#B77B68] px-6 py-4 text-lg font-semibold text-white transition hover:bg-[#A66858] disabled:cursor-not-allowed disabled:opacity-60"
                 disabled={cartItems.length === 0}
-                onClick={clearCart}
+                onClick={() => { setIsCartOpen(false); onCheckout?.() }}
               >
                 Checkout
               </button>
