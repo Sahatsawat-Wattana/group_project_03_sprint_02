@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from "react";
 import Pagination from "@mui/material/Pagination";
-import ProductCard from "../components/ProductCard";
-import { bookData } from "../mock-data/bookdata";
-import { categories } from "../mock-data/categories";
-import { useContext } from "react";
-import { CategoryContext } from "../context/categorycontext/categorycontext";
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
+import BookCard from "../components/CardComponents/BookCard";
+import { bookData } from "../mock-data/bookData";
+
+import NavBar from "../components/HomeComponents/NavBar";
+import Footer from "../components/HomeComponents/Footer";
 import { ScrollRestoration } from "react-router-dom";
 
 const ProductList = () => {
   // --- States ---
+
+  const categories = ["All","Self-help", "History", "Science fiction & Fantasy","Children","Romance"];
+
+
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(8);
-  const { selectedCategory, setSelectedCategory } = useContext(CategoryContext);
+  const { selectedCategory, setSelectedCategory } = useState('All');
 
   // --- Responsive Logic ---
   useEffect(() => {
@@ -98,7 +100,7 @@ const ProductList = () => {
           {filteredBooks.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 min-h-[600px] content-start">
               {currentBooks.map((book) => (
-                <ProductCard key={book.id} book={book} />
+                <BookCard key={book.id} book={book} />
               ))}
             </div>
           ) : (
