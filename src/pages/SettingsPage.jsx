@@ -24,7 +24,7 @@ export default function SettingsPage() {
   });
 
   /* =========================
-     REFS
+     REFS --> manage click outside for profile, payment, and modals
   ========================= */
 
   const profileRef = useRef(null);
@@ -33,7 +33,7 @@ export default function SettingsPage() {
   const paymentButtonRef = useRef(null);
   const profileButtonRef = useRef(null);
   /* =========================
-     DATA
+     Initial DATA
   ========================= */
 
   const initialData = {
@@ -53,6 +53,8 @@ export default function SettingsPage() {
     cvv: "123",
   };
 
+  // แสดงข้อมูลบนหน้า settings โดยใช้ formData เป็นตัวเก็บข้อมูลหลัก
+  // และ profileDraft กับ paymentDraft เป็นตัวเก็บข้อมูลชั่วคราวเมื่อแก้ไข
   const [formData, setFormData] = useState(initialData);
 
   const [profileDraft, setProfileDraft] = useState(initialData);
